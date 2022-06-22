@@ -1,0 +1,18 @@
+header / navbar (fixed bagus) V
+heroes V
+profil
+custom cards / album = portfolio V
+about
+footer + media sosial V
++++++++++
+penjelasan portofolio
+blog (X)
+===========================
++ bentuk
+www.titusklein.com
+nadiaux.design
+---------------------------
++ portofolio
+denisechandler.com
++ bot pertanyaan kanan bawah 
+seanhalpin.design
