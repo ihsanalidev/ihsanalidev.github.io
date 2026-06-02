@@ -1,0 +1,130 @@
+#cx-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 2rem;
+}
+
+#cx-stage {
+  position: relative;
+  width: 200px;
+  height: 280px;
+  perspective: 800px;
+}
+
+.cx-card {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: all 0.6s ease;
+}
+
+.cx-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.75);
+  display: block;
+}
+
+.cx-card .cx-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 10px 14px 14px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.85));
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* state tengah */
+.cx-card.cx-center {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 3;
+  border-color: #a78bfa;
+}
+
+/* state kiri */
+.cx-card.cx-left {
+  transform: translateX(-70px) scale(0.82) translateZ(-60px) rotateY(18deg);
+  opacity: 0.5;
+  z-index: 2;
+}
+
+/* state kanan */
+.cx-card.cx-right {
+  transform: translateX(70px) scale(0.82) translateZ(-60px) rotateY(-18deg);
+  opacity: 0.5;
+  z-index: 2;
+}
+
+/* state tersembunyi */
+.cx-card.cx-hide {
+  transform: scale(0.6) translateZ(-120px);
+  opacity: 0;
+  z-index: 1;
+}
+
+/* dots */
+#cx-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.cx-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(167,139,250,0.2);
+  border: 1.5px solid rgba(167,139,250,0.5);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cx-dot.cx-on {
+  background: #a78bfa;
+  transform: scale(1.3);
+}
+
+/* progress bar */
+#cx-bar-wrap {
+  width: 160px;
+  height: 3px;
+  background: rgba(167,139,250,0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+#cx-bar {
+  height: 100%;
+  width: 0%;
+  background: #a78bfa;
+  border-radius: 2px;
+}
+
+/* tombol */
+#cx-controls {
+  display: flex;
+  gap: 10px;
+}
+
+#cx-controls button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(167,139,250,0.4);
+  background: transparent;
+  color: #a78bfa;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#cx-controls button:hover {
+  background: rgba(167,139,250,0.15);
+}

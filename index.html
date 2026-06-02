@@ -1,156 +1,526 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/logo-computer.png">
-    <meta name="keywords" content="Ihsan, Ali, Web Developer, Full Stack Web Developer, Portfolio, Portofolio, HTML, CSS">
-    <meta name="author" content="Ihsan Ali">
-    <meta name="description" content="Portfolio owned by Ihsan Ali.">
-    <title>Ihsan Ali | Full-Stack Web Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Link Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Bungee+Spice&family=Poller+One&display=swap" rel="stylesheet">
+    <title>Ihsanalidev | Full Stack Developer</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
 </head>
 <body>
 
-    <header>
-        <a href="https://ihsanalidev.com" class="logo"><b>Ihsanali</b><span>dev</span></a>
-        
-        <div class="navbar-button">
-            <a href="#home"><b>Home</b></a>
-            <a href="#about"><b>About</b></a>
-            <a href="#projects"><b>Projects</b></a>
-            <a href="#service"><b>Contact</b></a>
+    <!-- <header>
+        <div class="dark-mode">
+            <button class="button-dark-mode" onclick="toggleDarkMode()">
+                <i class="fa-regular fa-moon fa-2x"></i>
+            </button>
         </div>
-    </header>
+        <div class="navbar">
+            <nav class="navbar-top">
+                <ul>
+                    <li><a href="#home" class="anchor-home">Home</a></li>
+                    <li><a href="#about" class="anchor-about">About</a></li>
+                    <li><a href="#projects" class="anchor-projects">Projects</a></li>
+                    <li><a href="#skills" class="anchor-skills">Skills</a></li>
+                    <li><a href="#other" class="anchor-other">Other</a></li>
+                </ul>
+            </nav>
+        </div>
 
-    <section class="konten-pertama" id="home">
-        <!-- <img src="assets/pasfoto-dummy.jpg" alt="foto ihsan"> -->
-        <img src="assets/PasFoto.png" alt="foto ihsan">
-        <div>
-            <h1>Full-Stack Web
-                <br> Developer &#128075;
-            </h1>
+        <button id="openContactBtn" class="openContactBtn">Get in Touch</button>
+
+        <div id="contactModal" class="modal-overlay">
             
-            <h2>Hi, I am Ihsan Ali. A passionate Full-Stack Web Developer<br> based in Indonesia. &#128205;</h2>
-            <!-- <img src="assets/pasfoto-dummy.jpg" alt="foto ihsan"> -->
-            <!-- FOTO BULET -->
-            <!-- ICON LINKEDIN dan GITHUB -->
-            <a href="https://www.linkedin.com/in/ihsan-ali-suwarno-712845228/" target="_blank"><i class='fa fa-linkedin'></i></a>
-            <a href="https://www.github.com/ihsanalidev" target="_blank"><i class='fa fa-github'></i></a>
+            <div class="modal-content">
+                <span class="close-btn" id="closeContactBtn">&times;</span>
+                <h2>Get in touch</h2>
+                <p>Let's build something great together.</p>
+                
+                <div class="modal-options">
+                    <div class="card-call" onclick="window.open('https://calendly.com/username', '_blank')">
+                        <i class="fa-regular fa-calendar"></i>
+                        <h4>Book a call</h4>
+                        <p>30 Min Call</p>
+                    </div>
+                    
+                    <div class="card-email">
+                        <i class="fa-regular fa-envelope"></i>
+                        <h4>Email me</h4>
+                        <p>Open Gmail</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </section>
-
-    <!-- <section class="konten-kedua" id="about">
-        <h2>Tech Stack</h2>
-        <div class="pemisah"></div>
-        <a href="https://html.spec.whatwg.org/multipage/" target="_blank"><img src="assets/html.png" alt="html"></img></a>
-        <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank"><img src="assets/css.png" alt="CSS"></img></a>
-        <a href="https://262.ecma-international.org/" target="_blank"><img src="assets/js.png" alt="JS"></img></a>
-        <a href="https://www.php.net/" target="_blank"><img src="assets/php.png" alt="PHP"></img></a>
-        <a href="https://laravel.com/" target="_blank"><img src="assets/laravel.png" alt="Laravel"></img></a>
-        <a href="https://www.codeigniter.com/" target="_blank"><img src="assets/codeigniter.png" alt="Codeigniter"></img></a>
-        <a href="https://www.mysql.com/" target="_blank"><img src="assets/mysql.png" alt="Mysql"></img></a>
-        <a href="https://mariadb.org/" target="_blank"><img src="assets/mariadb.png" alt="MariaDB"></img></a>
-    </section> -->
-    <section class="konten-kedua" id="about">
-        <h2>Tech Stack</h2>
-        <div class="pemisah"></div>
-        <div class="tech-logos">
-            <a href="https://html.spec.whatwg.org/multipage/" target="_blank"><img src="assets/html.png" alt="html"></a>
-            <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank"><img src="assets/css.png" alt="CSS"></a>
-            <a href="https://262.ecma-international.org/" target="_blank"><img src="assets/js.png" alt="JS"></a>
-            <a href="https://www.php.net/" target="_blank"><img src="assets/php.png" alt="PHP"></a>
-            <a href="https://laravel.com/" target="_blank"><img src="assets/laravel.png" alt="Laravel"></a>
-            <a href="https://www.codeigniter.com/" target="_blank"><img src="assets/codeigniter.png" alt="Codeigniter"></a>
-            <a href="https://www.mysql.com/" target="_blank"><img src="assets/mysql.png" alt="Mysql"></a>
-            <a href="https://mariadb.org/" target="_blank"><img src="assets/mariadb.png" alt="MariaDB"></a>
-        </div>
-    </section>
-
-
-    <section class="konten-ketiga">
-        <div class="container">
-            <img src="assets/computer.jpg" alt="computer">
+    </header> -->
+    <my-header></my-header>
     
-            <h1>ABOUT ME</h1>
-            <h2>A dedicated Full-stack Web Developer<br>based in Jakarta, Indonesia</h2>
-            <h3>As a Full-stack Web Developer, I possess an impressive arsenal of skills in HTML, CSS, JavaScript, PHP, PHP Framework using Laravel and Codeigniter, and Database using MySQL. I excel in making responsive web design, team oriented, and attention to detail. I am also a team player who thrives in collaborating with cross-functional teams to produce outstanding web applications.</h3>
-        </div>
-    </section>
+
+
     
-    <section class="konten-keempat" id="projects">
-        <h1>My Projects</h1>
-        <!---
-        <div class="project">
-            <div class="service-contentsaya">
-                <div class="rowsaya">
-                    <a href="https://ihsanalidev.github.io/"><img src="assets/coverappdocbroiler.png" alt="gambar cover app"></a>
+    <main>
+        <!-- <h1>Hi, I'm <span class="text-gradient">Ihsanalidev</span></h1> -->
+        <div class="my-name" id="home">
+            <h1>Hi, I'm <span class="text-shimmer">Ihsanalidev</span></h1>
+        </div>
+        
+        <div class="scroll-indicator">
+            <p>Scroll to explore</p>
+            <i class="fa-solid fa-arrow-down arrow"></i>
+        </div>
+
+
+
+
+        <!-- <div class="about-section" id="about">
+            <div class="">
+                <div class="my-full-name">
+                    <div class="div-glow-text">
+                        <h1 class="glow-text">Ihsan Ali</h1>
+                    </div>
+                    <p class="name-card-mono center-text">Fullstack Developer</p>
+                </div>
+                <div class="my-education">
+                    <div>
+                        Hover to read more
+                    </div>
+                    <div>
+                        <h3>Science Club</h3>
+                        <p>Active member of the GenAI Science Club at AGH. Currently training computer vision models for automated road obstacle detection in autonomous systems.</p>
+                    </div>
+                    <div>
+                        <h3>University</h3>
+                        <p>Pursuing Computer Science & Intelligent Systems at AGH - ranked as Poland's #2 technical university. This elite program is recognized as the #1 major in the country for IT and Artificial Intelligence.</p>
+                    </div>
+                    <div>
+                        <h3>Competitions</h3>
+                        <p>2nd Place Winner at the Axios Smart City Hackathon and 3rd Place at the Cassini Space Technologies Hackathon. Proven ability to translate high-tech engineering into scalable business models under pressure.</p>
+                    </div>
                 </div>
             </div>
-            <div class="child">
-                <h1>New Project Coming Soon &#129312;</h1>
+            
+            <div class="my-key-points">
+
             </div>
+            <div class="my-photo">
+
+            </div>
+            <div class="my-city-weather">
+
+            </div>
+            <div class="my-tect-stack">
+
+            </div>
+        </div> -->
+
+
+
+        <div class="container-about" id="about">
+
+            <div class="card-about intro">
+                <h4 class="glow-text">Ihsan
+                    <!-- <br> -->
+                    Ali
+                </h4>
+                <p>FULLSTACK DEVELOPER</p>
+            </div>
+
+            <div class="card-about top-info">
+                <span class="button-hover-to-read-more">HOVER TO READ MORE</span>
+                <!-- <span class="button-hover-to-read-more">READ MORE</span> -->
+                <div class="mini-cards">
+                    <div class="mini-card-1">
+                        <h4>Science Club</h4>
+                        <p>Active member of the GenAI Science Club at AGH. Currently training computer vision models for automated road obstacle detection in autonomous systems.</p>
+                    </div>
+                    <div class="mini-card-2">
+                        <h4>University</h4>
+                        <p>Pursuing Computer Science & Intelligent Systems at AGH - ranked as Poland's #2 technical university. This elite program is recognized as the #1 major in the country for IT and Artificial Intelligence.</p>
+                    </div>
+                    <div class="mini-card-3">
+                        <h4>Competitions</h4>
+                        <p>2nd Place Winner at the Axios Smart City Hackathon and 3rd Place at the Cassini Space Technologies Hackathon.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-about mindset">
+                <h2>Mindset</h2>
+                <p>Building more than software. My passion provides discipline and focus I need to grow.</p>
+                
+
+
+
+                <!-- 3D Carousel -->
+                <div id="cx-wrap">
+                    <div id="cx-stage"></div>
+                    <div id="cx-dots"></div>
+                    <div id="cx-bar-wrap"><div id="cx-bar"></div></div>
+                    <div id="cx-controls">
+                    <button id="cx-prev">&#8592;</button>
+                    <button id="cx-pause">&#9646;&#9646;</button>
+                    <button id="cx-next">&#8594;</button>
+                    </div>
+                </div>
+                
+
+
+
+
+                <p>Mastering body and mind is my path to excellence.</p>
+            </div>
+
+            <div class="card-about profile">
+                <img src="https://picsum.photos/500/600" alt="profile">
+            </div>
+
+            <div class="card-about craft">
+                <h2>Craft</h2>
+                <p>Building scalable apps, websites, and automations.</p>
+                <p>I understand what advantages modern tech can provide, helping me advise on the solutions a business actually needs.</p>
+
+
+
+                <section class="tech-stack">
+                    <div class="marquee">
+                        <div class="marquee-content">
+                            <div class="item">
+                                <img src="assets/img/python.png" alt="Python">
+                                <span>Python</span>
+                            </div>
+
+                            <div class="item">
+                                <img src="assets/img/node.png" alt="Node">
+                                <span>Node</span>
+                            </div>
+
+                            <div class="item">
+                                <img src="assets/img/tailwind.png" alt="Tailwind">
+                                <span>Tailwind</span>
+                            </div>
+
+                            <div class="item">
+                                <img src="assets/img/docker.png" alt="Docker">
+                                <span>Docker</span>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/flutter.png" alt="Flutter">
+                                <span>Flutter</span>
+                            </div>
+
+                            <div class="item">
+                                <img src="assets/img/git.png" alt="Git">
+                                <span>Git</span>
+                            </div>
+
+                            <div class="item">
+                                <img src="assets/img/laravel.png" alt="Laravel">
+                                <span>Laravel</span>
+                            </div>
+
+                            <div class="item">
+                                <img src="assets/img/react.png" alt="React">
+                                <span>React</span>
+                            </div>
+                        </div>
+                    </div>
+                    </section>
+
+
+
+                <p>Active Hackathon competitor & Science Club member. Feel free to invite me to collaborate.</p>
+                <p><div class="ping-dot"></div>Open to collaboration & freelance</p>
+            </div>
+
+            <!-- <div class="card-about location">
+                <h2>JAKARTA, INDONESIA</h2>
+                <p>GMT+7</p>
+            </div> -->
+
+
+            <div class="card-about location">
+                <div class="location-map-bg"></div>
+                <div class="location-content">
+                    <h2>JAKARTA, INDONESIA</h2>
+                    <p class="location-coords">6.1751° S, 106.8272° E</p>
+                    <p class="location-tz">GMT+7</p>
+                </div>
+            </div>
+
         </div>
-        --->
-        <div class="project">
-            <div class="service-contentsaya">
-                <div class="rowsaya">
-                    <a href="https://ihsanalidev.github.io/"><img src="assets/coverappcompanyprofile.png" alt="gambar cover app 1"></a>
+
+
+
+
+
+
+        <div class="projects-section" id="projects">
+            <div class="project-title">
+                <h3>Portfolio</h3>
+                <h1>Featured <span class="text-shimmer">Projects</span></h1>
+                <p>A curated selection of projects that made me confident in building software.</p>
+            </div>
+            <div class="container-cards">
+                <div class="card-projects">
+                    <h3 class="name-card-mono">01 Website App</h3>
+                    <h2>Company Profile</h2>
+                    <div class="card-1">
+                        <p class="card-text">Web-based company profile application designed to showcase company information, services, portfolio, and contact details through an interactive and responsive user interface.</p>
+                        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/img/project1.png" alt="img-project1" class="img-project1">
+                        </a>
+                    </div>
+                    <div class="tech-stack-project">
+                        <span>PHP</span>
+                        <span>Laravel</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                    </div>
+                </div>
+                <div class="card-projects">
+                    <h3 class="name-card-mono">02 Mobile App</h3>
+                    <h2>Personal Finance Tracker</h2>
+                    <div class="card-2">
+                        <p class="card-text">This Personal Finance Tracker is an offline-first mobile application built using Clean Architecture to ensure stable state management and local data encryption. It features interactive data visualizations for daily expenses alongside secure storage to protect users' sensitive financial records.</p>
+                        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/img/personal_finance_tracker.jpg" alt="personal_finance_tracker" class="img-project2">
+                        </a>
+                    </div>
+                    <div class="tech-stack-project">
+                        <span>Flutter</span>
+                        <span>Dart</span>
+                        <span>Web Sockets</span>
+                        <span>Multiplayer</span>
+                    </div>
+                </div>
+                <div class="card-projects">
+                    <h3 class="name-card-mono">03 Website App</h3>
+                    <h2>Spin Wheel App</h2>
+                    <div class="card-3">
+                        <p class="card-text">Spin Wheel App is an interactive web application designed to randomly select a winner from a customizable list of participants or options. It is ideal for door prizes, giveaways, raffles, and events, featuring a simple interface and smooth spinning animation for an engaging user experience</p>
+                        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/img/spin_wheel_app.png" alt="spin_wheel_app" class="img-project3">
+                        </a>
+                    </div>
+                    <div class="tech-stack-project">
+                        <span>X</span>
+                        <span>X</span>
+                        <span>X</span>
+                        <span>X</span>
+                    </div>
+                </div>
+                <div class="card-projects">
+                    <h3 class="name-card-mono">04 Website App</h3>
+                    <h2>(Clone) Super Mario Bros</h2>
+                    <div class="card-4">
+                        <p class="card-text">(Clone) Super Mario Bros is a classic-inspired 2D platformer game built to recreate the nostalgic gameplay experience of traditional arcade games. Players can run, jump, and overcome obstacles through engaging levels with smooth controls and retro-style visuals.</p>
+                        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/img/super_mario_bros.png" alt="super_mario_bros" class="img-project4">
+                        </a>
+                    </div>
+                    <div class="tech-stack-project">
+                        <span>X</span>
+                        <span>X</span>
+                        <span>X</span>
+                        <span>X</span>
+                    </div>
+                </div>
+                <div class="card-projects">
+                    <h3 class="name-card-mono">05 AI App</h3>
+                    <h2>AI Meeting Assistant</h2>
+                    <div class="card-5">
+                        <p class="card-text">An AI Meeting Assistant is an intelligent tool that automatically records, transcribes, and generates structured minutes or action items from your conferences. It seamlessly integrates with platforms like Zoom and Google Meet to streamline post-meeting documentation and boost team productivity.</p>
+                        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/img/coming_soon.jpg" alt="super_mario_bros" class="img-project4">
+                        </a>
+                    </div>
+                    <div class="tech-stack-project">
+                        <span>X</span>
+                        <span>X</span>
+                        <span>X</span>
+                        <span>X</span>
+                    </div>
+                </div>
+                <div class="card-projects">
+                    <h3 class="name-card-mono">06 Robotika</h3>
+                    <h2>Humanoid Robot</h2>
+                    <div class="card-6">
+                        <p class="card-text">Humanoid robots are advanced automated systems designed with a physical structure resembling the human body, including a torso, head, and limbs. These sophisticated machines integrate artificial intelligence to navigate environments, interact with humans, and perform complex tasks autonomously.</p>
+                        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/img/coming_soon.jpg" alt="super_mario_bros" class="img-project4">
+                        </a>
+                    </div>
+                    <div class="tech-stack-project">
+                        <span>X</span>
+                        <span>X</span>
+                        <span>X</span>
+                        <span>X</span>
+                    </div>
+                </div>
+                <div class="card-projects">
+                    <h3 class="name-card-mono">07 Web App</h3>
+                    <h2>AR Historical Exhibition</h2>
+                    <div class="card-7">
+                        <p class="card-text">The AR Historical Exhibition application transforms any environment into an interactive museum by overlaying digital artifacts and information panels onto the real world using a smartphone camera. Users can view life-sized 3D models of historical figures and objects, offering an immersive educational experience without need for a physical museum visit.</p>
+                        <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/img/ar_historical_exhibition.png" alt="ar_historical_exhibition" class="img-project7">
+                        </a>
+                    </div>
+                    <div class="tech-stack-project">
+                        <span>X</span>
+                        <span>X</span>
+                        <span>X</span>
+                        <span>X</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="explore-my-github">
+                <p>Explore all projects on GitHub</p>
+                <i class="fa-solid fa-arrow-up-right-from-square"><a href="https://google.com" target="_blank" rel="noopener noreferrer"></a></i>
+            </div> -->
+
+            <div class="explore-my-github">
+                <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+                    <p>Explore all projects on GitHub</p>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="skills-section" id="skills">
+            <div class="project-title">
+                <h3>Tech Stack</h3>
+                <h1>My <span class="text-shimmer">Skills</span></h1>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="sphere-container">
+                        <canvas id="myCanvas" width="400" height="400"></canvas>
+                        <div id="tags">
+                        <ul>
+                            <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"></a></li>
+                            <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"></a></li>
+                            <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"></a></li>
+                            <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"></a></li>
+                            <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"></a></li>
+                            <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"></a></li>
+                            <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"></a></li>
+                            <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"></a></li>
+                            <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"></a></li>
+                            <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"></a></li>
+                            <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"></a></li>
+                            <li><a href="#"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"></a></li>
+                        </ul>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="other-section" id="other">
+            <div class="project-title">
+                <h1>More to <span class="text-shimmer">Explore</span></h1>
+                <h3>Check out these additional resources and connect with me</h3>
+            </div>
+            <div class="cards3">
+                <div class="guestbook-card">
+                    <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+                        <div class="icon-card1">
+                            <i class="fa-solid fa-book fa-2x"></i>
+                        </div>
+                        <h1 class="card1">Guestbook</h1>
+                        <p class="description-card1">Leave your mark and see what others have to say</p>
+                        <p class="card1">Explore &#8594;</p>
+                    </a>
+                </div>
+                <div class="achievements-card">
+                    <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+                        <div class="icon-card2">
+                            <i class="fa-solid fa-award fa-2x"></i>
+                        </div>
+                        <h1 class="card2">Achievement</h1>
+                        <p class="description-card2">Milestones, certifications, and complishments</p>
+                        <p class="card2">Explore &#8594;</p>
+                    </a>
+                </div>
+                <div class="mylink-card">
+                    <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+                        <div class="icon-card3">
+                            <i class="fa-solid fa-link fa-2x"></i>
+                        </div>
+                        <h1 class="card3">My Links</h1>
+                        <p class="description-card3">Find me across the web and social platforms</p>
+                        <p class="card3">Explore &#8594;</p>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="project">
-            <div class="service-contentsaya">
-                <div class="rowsaya">
-                    <a href="https://ihsanalidev.github.io/"><img src="assets/coverappnews-scrapping.png" alt="gambar cover app 2"></a>
-                </div>
+
+    </main>
+
+
+
+    <!-- <footer>
+        <div class="container-footer">
+            <div class="text-copyright">
+                <h2 class="footer-text">IA • © 2026 Ihsanalidev</h2>
             </div>
-        </div>
-    </section>
-    <!-- ------------------ -->
-    <section class="service" id="service">
-        <div class="center">
-            <h1>Get In Touch !</h1>
-            <h2>Contact Me &#128071;</h2>
-        </div>
-        <div class="service-content">
-            <div class="row">
-                <a href="mailto:ihsansu12@gmail.com">
-                    <i class='fa fa-envelope'></i>
-                    <h3>Email</h3>
-                    <p>ihsanaliwork@gmail.com</p>
+            <div class="icon-footer">
+                <a href="https://github.com/ihsanalidev" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github fa-2x"></i>
                 </a>
-            </div>
-            <div class="row">
-                <a href="https://www.linkedin.com/in/ihsan-ali-suwarno-712845228/">
-                    <i class='fa fa-linkedin'></i>
-                    <h3>Linkedin</h3>
-                    <p>ihsan-ali-suwarno</p>
+                <a href="https://www.linkedin.com/in/ihsan-ali-suwarno/" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin-in fa-2x"></i>
                 </a>
-            </div>
-            <div class="row">
-                <a href="https://www.github.com/ihsanalidev">
-                    <i class='fa fa-github'></i>
-                    <h3>Github</h3>
-                    <p>ihsanalidev</p>
+                <a href="mailto:ihsanaliwork@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-regular fa-envelope fa-2x"></i>
                 </a>
             </div>
         </div>
-    </section>
-    <!-- ------------------ -->
-    <footer>
-        <div class="copyright">
-            <p>Copyright © 2023. All right Reserved. Created with &#128150; By Ihsan ali</p>
-            <a href="https://www.linkedin.com/in/ihsan-ali-suwarno-712845228/" target="_blank"><i class='fa fa-linkedin'></i></a>
-            <a href="https://www.github.com/ihsanalidev" target="_blank"><i class='fa fa-github'></i></a>
-            <!-- <a href="https://api.whatsapp.com/send?phone=6287111&text=Say Hi to me :)"><i class='fa fa-whatsapp'></i></a> -->
-        </div>
-    </footer>
+    </footer> -->
+    <my-footer></my-footer>
+
+
+
+    <script src="https://www.goat1000.com/tagcanvas.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>  
+    
+    
+
+
+
 </body>
 </html>

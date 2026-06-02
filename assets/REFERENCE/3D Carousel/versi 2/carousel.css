@@ -1,0 +1,169 @@
+/* ============================================
+   carousel.css
+   Semua class pakai prefix "c-" agar tidak
+   konflik dengan CSS lain di portfolio
+============================================ */
+
+/* ── Layout wrapper ── */
+.c-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 1.5rem 0.5rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── Stage: area perspektif 3D ── */
+.c-stage {
+  position: relative;
+  width: 180px;
+  height: 240px;
+  perspective: 800px;
+}
+
+/* ── Setiap kartu ── */
+.c-card {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.c-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.72);
+  display: block;
+}
+
+.c-card-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.c-card-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 12px 14px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── State: kartu aktif (tengah) ── */
+.c-card.state-center {
+  transform: translateX(0) scale(1) translateZ(0);
+  opacity: 1;
+  z-index: 3;
+  border-color: #a78bfa;
+}
+
+/* ── State: kartu kiri ── */
+.c-card.state-left {
+  transform: translateX(-65px) scale(0.82) translateZ(-60px) rotateY(18deg);
+  opacity: 0.5;
+  z-index: 2;
+  border-color: transparent;
+}
+
+/* ── State: kartu kanan ── */
+.c-card.state-right {
+  transform: translateX(65px) scale(0.82) translateZ(-60px) rotateY(-18deg);
+  opacity: 0.5;
+  z-index: 2;
+  border-color: transparent;
+}
+
+/* ── State: kartu tersembunyi ── */
+.c-card.state-hide {
+  transform: translateX(0) scale(0.65) translateZ(-120px);
+  opacity: 0;
+  z-index: 1;
+}
+
+/* ── Dots indikator ── */
+.c-dots {
+  display: flex;
+  gap: 7px;
+}
+
+.c-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(167, 139, 250, 0.2);
+  border: 1.5px solid rgba(167, 139, 250, 0.4);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.c-dot.on {
+  background: #a78bfa;
+  transform: scale(1.35);
+}
+
+/* ── Progress bar ── */
+.c-bar-wrap {
+  width: 160px;
+  height: 3px;
+  background: rgba(167, 139, 250, 0.18);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.c-bar {
+  height: 100%;
+  width: 0%;
+  background: #a78bfa;
+  border-radius: 2px;
+  transition: width 0.05s linear;
+}
+
+/* ── Tombol kontrol ── */
+.c-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.c-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(167, 139, 250, 0.4);
+  background: transparent;
+  color: #a78bfa;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.c-btn:hover {
+  background: rgba(167, 139, 250, 0.15);
+}
+
+.c-btn:active {
+  transform: scale(0.95);
+}
