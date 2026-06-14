@@ -32,11 +32,13 @@ class MyHeader extends HTMLElement {
                 <h4>Book a call</h4>
                 <p>30 Min Call</p>
               </div>
-              <div class="card-email">
-                <i class="fa-regular fa-envelope"></i>
-                <h4>Email me</h4>
-                <p>Open Gmail</p>
-              </div>
+              <a class="email-link" href="mailto:ihsanaliwork@gmail.com" target="_blank">
+                <div class="card-email">
+                  <i class="fa-regular fa-envelope"></i>
+                  <h4>Email me</h4>
+                  <p>Open Gmail</p> 
+                </div>
+              </a>
             </div>
           </div>
         </div>

@@ -334,9 +334,11 @@ header {
     to { opacity: 1; transform: scale(1); }
 }
 
-
-
-
+.email-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
 
 /* ===================================================================== text-gradient ==================================================== */
 /* .text-gradient {
@@ -1517,4 +1519,333 @@ html {
 
 .fa-envelope:hover {
     transform: scale(1.1);
+}
+
+/* ================================================================== guestbook =========================================================== */
+/* .guestbook-title {
+    padding: 50px 40px; 
+    text-align: center; 
+    color: var(--third-color); 
+    font-family: var(--font-family);
+} */
+
+.guestbook-title {
+    padding: 50px 40px; 
+    text-align: center; 
+    color: var(--third-color); 
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+}
+
+.button-back {
+    display: flex;
+}
+
+.button-back a {
+    display: flex;  
+    flex-direction: row;
+    align-items: center; 
+    gap: 8px;          
+    
+    text-decoration: none; 
+    color: white;
+}
+
+.button-back p {
+    margin: 0;
+    color: white;
+}
+
+.guestbook-title a {
+    text-decoration: none;  
+    align-self: flex-start;  
+    text-align: left;
+    padding-left: 200px;    
+}
+
+.h3-purple {
+    color: #6A3EBC;
+    padding: 0px 0px 0px 0px;
+    font-family: var(--font-family);
+}
+
+.h1-white {
+    color: white;
+    font-size: 77px;
+    font-family: var(--font-family);
+}
+
+.h1-purple {
+    color: #6A3EBC;
+    font-size: 77px;
+    font-family: var(--font-family);
+}
+
+.h3-white {
+    color: #747185;
+    font-family: var(--font-family);
+}
+
+.div-signin {
+    display: flex; 
+    flex-direction: column;
+    margin: 0px auto;    
+    width: 800px;
+    height: 200px;
+    background-color: #201937;
+    border: 2px solid #3C2D60;
+    border-radius: 20px;
+    justify-content: center; 
+    align-items: center;  
+    gap: 15px;      
+}
+
+.wrapper-tombol {
+    display: flex;
+    flex-direction: row; 
+    gap: 20px;
+}
+
+.signin-github, .signin-google {
+    display: inline-flex; 
+    padding: 15px 30px; 
+    align-items: center;  
+    gap: 10px;          
+    color: white;       
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #191721;
+    cursor: pointer;
+}
+
+.signin-github h4, .signin-google h4 {
+    margin: 0;
+}
+
+.comment-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;             
+    width: 800px;
+    margin: 50px auto;    
+}
+
+.comment-1, .comment-2, .comment-3, .comment-4 {
+    display: flex;
+    flex-direction: row;     
+    align-items: flex-start;  
+    gap: 20px;             
+    background-color: #151023; 
+    border: 2px solid #3C2D60; 
+    border-radius: 20px;
+    padding: 20px;
+    
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comment-1:hover, .comment-2:hover, .comment-3:hover, .comment-4:hover {
+    background-color: #251b3d; 
+    border-color: #523e82; 
+    
+    box-shadow: 0px 0px 25px 2px rgba(110, 67, 219, 0.4);
+}
+
+.namedate-comment {
+    display: flex;
+    flex-direction: column;  
+    gap: 10px;               
+    width: 100%;           
+}
+
+/* 4. BARIS NAMA & TANGGAL */
+.name-date {
+    display: flex;
+    flex-direction: row;     
+    align-items: center;     
+    gap: 15px;        
+}
+
+.name-date h4, 
+.name-date h5, 
+.user-comment p {
+    margin: 0;              
+    text-align: left;        
+}
+
+.name-date h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.h5-comment {
+    font-size: 0.85rem;
+    color: #75747A !important; 
+}
+
+.color-comment {
+    color: #C8C8CB;
+}
+
+.img-template {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    overflow: hidden; 
+    flex-shrink: 0;     
+}
+
+.img-template img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+/* ================================================================== achievements =========================================================== */
+.h3-orange {
+    color: #FE9A00;
+    padding: 0px 0px 0px 0px;
+    font-family: var(--font-family);
+}
+
+.h1-orange {
+    color: #FE9A00;
+    font-size: 77px;
+    font-family: var(--font-family);
+}
+
+.achievement-card {
+    display: flex;
+    flex-direction: row;      
+    align-items: center;      
+    background-color: #151023; 
+    border: 2px solid #3C2D60;  
+    border-radius: 28px; 
+    width: 1000px;           
+    max-width: 100%;
+    margin: 40px auto;    
+    overflow: hidden;         
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.achievement-img {
+    flex: 1.2;              
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.achievement-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;     
+    display: block;
+}
+
+.achievement-content {
+    flex: 1;               
+    padding: 40px;        
+    display: flex;
+    flex-direction: column;  
+    gap: 20px;             
+    text-align: left;    
+}
+
+.achievement-title {
+    color: #ffffff;         
+    font-size: 3rem;       
+    font-weight: 700;
+    margin: 0;              
+    line-height: 1.1;      
+}
+
+/* STYLE DESKRIPSI */
+.achievement-desc {
+    color: #9A98A6;          
+    font-size: 1.25rem;   
+    line-height: 1.6;       
+    margin: 0;              
+}
+
+.achievement-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px); 
+    border-color: #523e82;    
+    box-shadow: 0px 15px 35px rgba(110, 67, 219, 0.25);
+}
+/* ================================================================== my-links =========================================================== */
+/* .social-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; 
+    width: 850px; 
+    max-width: 90%; 
+} */
+.social-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 850px; 
+    max-width: 90%; 
+
+    margin: 40px auto; 
+}
+
+.social-link-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #151023; 
+    border: 1px solid #1f1a30;
+    border-radius: 20px;
+    padding: 16px 24px;
+    text-decoration: none; 
+
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-left-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px; 
+}
+
+.icon-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #00a2ff; 
+    border-radius: 14px; 
+    background-color: transparent;
+    color: #00a2ff;
+    font-size: 1.4rem; 
+}
+
+.social-name {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.icon-redirect {
+    color: #5c596b; 
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.social-link-item:hover {
+    background-color: #1c1530; 
+    border-color: #31274c; 
+    transform: translateX(4px); 
+}
+
+.social-link-item:hover .icon-redirect {
+    color: #ffffff; 
 }
