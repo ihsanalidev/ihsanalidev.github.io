@@ -97,6 +97,12 @@ class MyFooter extends HTMLElement {
         </div>
       </footer>
     `;
+
+    window.goatcounter.visit_count({
+    append: 'my-footer #visitor-count',
+    path: 'TOTAL'
+  });
+  
   }
 }
 
