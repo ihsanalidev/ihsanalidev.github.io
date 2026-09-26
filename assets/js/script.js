@@ -102,7 +102,7 @@ class MyFooter extends HTMLElement {
     append: 'my-footer #visitor-count',
     path: 'TOTAL'
   });
-  
+
   }
 }
 
@@ -425,11 +425,3 @@ window.addEventListener('click', (event) => {
         modal.style.display = 'none';
     }
 });
-
-
-
-
-
-
-
-
