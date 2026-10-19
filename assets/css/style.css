@@ -1426,6 +1426,18 @@ html {
     transform: scale(1.2);
 }
 
+.case-studies-card {
+    border: 1px solid gray;
+    padding: 20px;
+    background-color: rgba(24, 21, 30, 0.75);
+    border-radius: 30px;
+    transition: transform 0.5s ease;
+}
+
+.case-studies-card:hover {
+    transform: scale(1.2);
+}
+
 .icon-card1 {
     background-color: #0a0a0f;
     text-align: center;

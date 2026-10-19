@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,14 +19,14 @@
             width: 0; height: 0; z-index: 3;
             border-left: 14px solid transparent;
             border-right: 14px solid transparent;
-            border-top: 28px solid #111827;
-            filter: drop-shadow(0 2px 2px rgba(0,0,0,.3));
+            border-top: 28px solid #ff9800;
+            filter: drop-shadow(0 2px 2px rgba(0,0,0,.4));
         }
 
         #wheel {
             position: relative; width: 100%; height: 100%;
             border-radius: 50%; border: 6px solid #fff;
-            box-shadow: 0 8px 24px rgba(0,0,0,.2);
+            box-shadow: 0 8px 24px rgba(0,0,0,.35);
             background: #e5e7eb;
             transition: transform 4s cubic-bezier(.17, .67, .12, .99);
             overflow: hidden;
@@ -41,13 +41,12 @@
             transform: translateY(-50%) rotate(var(--rot));
         }
 
-        .names-input { width: 100%; max-width: 420px; display: flex; flex-direction: column; gap: 8px; }
+        .names-input { width: 100%; max-width: 420px; display: flex; flex-direction: column; gap: 8px; text-align: left; }
         .names-input label { font-weight: 600; font-size: .9rem; }
         .names-input textarea {
             width: 100%; min-height: 110px; padding: 10px 12px; box-sizing: border-box;
             border: 1px solid #d1d5db; border-radius: 10px; font: inherit; resize: vertical;
         }
-        .names-input small { color: #6b7280; }
 
         .btn-row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
         .spin-btn:disabled, .apply-btn:disabled { opacity: .6; cursor: not-allowed; }
@@ -56,6 +55,111 @@
             background: #fff; font: inherit; font-weight: 600; cursor: pointer;
         }
         #result { font-weight: 700; min-height: 1.5em; text-align: center; }
+
+        /* ===== TEKS TERANG + RATA TENGAH ===== */
+        .wrap { color: #cbd5e1; text-align: center; }
+        .wrap p, .wrap li { color: #cbd5e1; line-height: 1.7; }
+
+        /* Nav atas */
+        .topnav a { color: #fff; }
+        .topnav a:hover { color: #ff9800; }
+
+        /* Intro (judul halaman) */
+        .intro { margin: 60px auto 70px; max-width: 720px; }
+        .intro .eyebrow {
+            display: block; color: #ff9800; font-weight: 700;
+            font-size: 1.25rem; margin-bottom: 18px;
+        }
+        .intro h1 {
+            color: #fff; font-size: clamp(2.6rem, 8vw, 4.5rem);
+            font-weight: 800; line-height: 1.1; margin: 0 0 22px;
+        }
+        .intro h1 span { color: #ff9800; }
+        .intro p { color: #94a3b8; font-size: 1.1rem; font-weight: 500; }
+
+        /* Header tiap case */
+        .wrap .case { max-width: 860px; margin: 0 auto 90px; }
+        .wrap .case .tag {
+            display: inline-block; padding: 6px 16px; border-radius: 999px;
+            background: rgba(255,152,0,.15); color: #ff9800;
+            font-weight: 700; font-size: .85rem; margin-bottom: 18px;
+        }
+        .wrap .case .title {
+            color: #fff; font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: 800; line-height: 1.2; margin: 0 0 14px;
+        }
+        .wrap .case .dek { color: #94a3b8; font-size: 1.05rem; max-width: 640px; margin: 0 auto 32px; }
+
+        /* Meta (peran, tools, dll) */
+        .meta-row {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-bottom: 32px;
+        }
+        .meta-item {
+            background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+            border-radius: 12px; padding: 12px 18px; min-width: 150px;
+        }
+        .meta-item .label { color: #94a3b8; font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; }
+        .meta-item .value { color: #fff; font-weight: 600; margin-top: 4px; }
+
+        /* Angka statistik */
+        .hero-stat { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; margin-bottom: 40px; }
+        .hero-stat .stat {
+            flex: 1 1 200px; background: rgba(255,255,255,.05);
+            border: 1px solid rgba(255,255,255,.1); border-radius: 16px; padding: 22px 16px;
+        }
+        .hero-stat .num { font-size: 2.4rem; font-weight: 800; }
+        .hero-stat .num.blue   { color: #60a5fa; }
+        .hero-stat .num.purple { color: #a78bfa; }
+        .hero-stat .num.orange { color: #ff9800; }
+        .hero-stat .cap { color: #94a3b8; font-size: .9rem; margin-top: 4px; }
+
+        /* Section isi */
+        .block { margin: 0 auto 36px; max-width: 720px; }
+        .block .h, .reflection .h {
+            color: #ff9800; font-size: 1.35rem; font-weight: 700; margin-bottom: 12px;
+        }
+
+        /* Langkah proses */
+        .steps { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 14px; text-align: left; }
+        .steps li {
+            background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1);
+            border-radius: 14px; padding: 16px 20px;
+        }
+        .steps h4 { color: #fff; margin: 0 0 6px; font-size: 1.05rem; }
+        .steps p { color: #cbd5e1; margin: 0; }
+
+        /* Chips */
+        .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 18px; }
+        .chip {
+            background: rgba(255,152,0,.12); color: #ffb74d;
+            border: 1px solid rgba(255,152,0,.3); border-radius: 999px;
+            padding: 6px 14px; font-size: .9rem; font-weight: 600;
+        }
+
+        /* Refleksi */
+        .reflection {
+            max-width: 720px; margin: 0 auto; padding: 24px;
+            background: rgba(255,255,255,.05); border-left: 4px solid #ff9800;
+            border-radius: 12px; text-align: left;
+        }
+        .reflection p { color: #e2e8f0; font-style: italic; margin: 0; }
+
+        /* Demo roda */
+        .demo {
+            background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1);
+            border-radius: 20px; padding: 28px 18px; margin-bottom: 44px;
+        }
+        .names-input label { color: #fff; }
+        .names-input small { color: #94a3b8; }
+        .names-input textarea {
+            background: rgba(0,0,0,.25); color: #fff; border: 1px solid rgba(255,255,255,.2);
+        }
+        .names-input textarea::placeholder { color: #64748b; }
+        .apply-btn { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.35); }
+        .apply-btn:hover:not(:disabled) { background: rgba(255,255,255,.1); }
+        #result { color: #fff; }
+        #wheel { border-color: rgba(255,255,255,.9); }
+        code { background: rgba(255,255,255,.1); color: #ffb74d; padding: 2px 6px; border-radius: 6px; }
     </style>
 </head>
 <body>
@@ -64,118 +168,123 @@
 
     <main>
 
-<nav class="topnav">
-  <div class="topnav-inner">
-    <a class="back" href="index.html">← Kembali</a>
-    <a href="#hris">HRIS DataOn</a>
-    <a href="#spinwheel">Spin Wheel App</a>
-  </div>
-</nav>
+        <div class="guestbook-title">
+            <div class="button-back">
+                <a href="index.html">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <p class="p-back-to-home">Back to home</p>
+                </a>
+            </div>
+            <h3 class="h3-orange">Portfolio</h3>
+            <h1 class="h1-white">Case<span class="h1-orange"> Studies</span></h1>
+            <h3 class="h3-white">Two projects that show my thinking process from problem to solution, from replicating an enterprise UI to building an interactive app from scratch.</h3>
+        </div>
 
 <div class="wrap">
 
-  <div class="intro">
-    <h1>Case Studies</h1>
-    <p>Dua proyek yang menunjukkan proses berpikir dari masalah hingga solusi — mulai dari replikasi UI enterprise sampai membangun aplikasi interaktif dari nol.</p>
-  </div>
+  <!-- <div class="intro">
+    <span class="eyebrow">Portfolio</span>
+    <h1>Case <span>Studies</span></h1>
+    <p>Two projects that show my thinking process from problem to solution, from replicating an enterprise UI to building an interactive app from scratch.</p>
+  </div> -->
 
   <!-- ============ CASE 1: HRIS ============ -->
   <div class="case hris" id="hris">
     <span class="tag hris">Company Profile · HRIS</span>
-    <h2 class="title">Membedah &amp; Membangun Ulang Company Profile DataOn</h2>
-    <p class="dek">Latihan clone website HRIS enterprise untuk memahami struktur dan pola desain company profile B2B SaaS.</p>
+    <h2 class="title">Dissecting &amp; Rebuilding the DataOn Company Profile</h2>
+    <p class="dek">A practice project cloning an enterprise HRIS website to understand the structure and design patterns of a B2B SaaS company profile.</p>
 
     <div class="meta-row">
-      <div class="meta-item"><div class="label">Peran</div><div class="value">Frontend Developer</div></div>
-      <div class="meta-item"><div class="label">Jenis</div><div class="value">Clone Project</div></div>
+      <div class="meta-item"><div class="label">Role</div><div class="value">Frontend Developer</div></div>
+      <div class="meta-item"><div class="label">Type</div><div class="value">Clone Project</div></div>
       <div class="meta-item"><div class="label">Tools</div><div class="value">HTML, CSS, JavaScript</div></div>
-      <div class="meta-item"><div class="label">Tahun</div><div class="value">2026</div></div>
+      <div class="meta-item"><div class="label">Year</div><div class="value">2026</div></div>
     </div>
 
     <div class="hero-stat">
-      <div class="stat"><div class="num blue">8+</div><div class="cap">section direplikasi</div></div>
-      <div class="stat"><div class="num purple">100%</div><div class="cap">responsif mobile-desktop</div></div>
-      <div class="stat"><div class="num orange">0</div><div class="cap">akses ke source code asli</div></div>
+      <div class="stat"><div class="num blue">8+</div><div class="cap">sections replicated</div></div>
+      <div class="stat"><div class="num purple">100%</div><div class="cap">mobile &amp; desktop responsive</div></div>
+      <div class="stat"><div class="num orange">0</div><div class="cap">access to the original source code</div></div>
     </div>
 
     <section class="block">
-      <h3 class="h">Latar Belakang</h3>
-      <p>DataOn adalah penyedia layanan HRIS (Human Resource Information System) dengan website company profile bergaya enterprise B2B: banyak section, navigasi kompleks, dan konten yang padat informasi. Proyek ini dibuat sebagai latihan mereplikasi struktur tersebut dari nol, tanpa akses ke source code asli.</p>
+      <h3 class="h">Background</h3>
+      <p>DataOn is an HRIS (Human Resource Information System) provider with an enterprise B2B-style company profile website: many sections, complex navigation, and information-dense content. This project was built as practice in replicating that structure from scratch, without access to the original source code.</p>
     </section>
 
     <section class="block">
-      <h3 class="h">Tantangan</h3>
-      <p>Website aslinya menggunakan mega menu dengan banyak sub-kategori produk, grid fitur yang rapat, serta logo klien dan testimoni yang tersusun dinamis. Tantangan utamanya adalah menyusun ulang tata letak ini secara manual, memastikan proporsi dan jarak antar elemen tetap konsisten di berbagai ukuran layar.</p>
+      <h3 class="h">Challenge</h3>
+      <p>The original website uses a mega menu with many product sub-categories, a tight feature grid, and dynamically arranged client logos and testimonials. The main challenge was rebuilding this layout manually while keeping proportions and spacing between elements consistent across different screen sizes.</p>
     </section>
 
     <section class="block">
-      <h3 class="h">Proses</h3>
+      <h3 class="h">Process</h3>
       <ol class="steps">
-        <li><h4>Audit visual halaman asli</h4><p>Memecah halaman menjadi section-section: hero, produk, fitur, klien, testimoni, footer.</p></li>
-        <li><h4>Menyusun struktur HTML semantik</h4><p>Membangun kerangka tiap section agar mudah diberi style dan dipelihara.</p></li>
-        <li><h4>Styling &amp; komponen reusable</h4><p>Membuat card, tombol, dan grid yang bisa dipakai ulang di beberapa section.</p></li>
-        <li><h4>Uji responsif</h4><p>Menyesuaikan mega menu dan grid fitur agar tetap rapi di layar mobile.</p></li>
+        <li><h4>Visual audit of the original page</h4><p>Breaking the page down into sections: hero, products, features, clients, testimonials, footer.</p></li>
+        <li><h4>Building a semantic HTML structure</h4><p>Creating the skeleton of each section so it is easy to style and maintain.</p></li>
+        <li><h4>Styling &amp; reusable components</h4><p>Creating cards, buttons, and grids that can be reused across several sections.</p></li>
+        <li><h4>Responsive testing</h4><p>Adjusting the mega menu and feature grid so they stay neat on mobile screens.</p></li>
       </ol>
     </section>
 
     <section class="block">
-      <h3 class="h">Solusi</h3>
-      <p>Hasil akhirnya adalah company profile dengan struktur section yang mengikuti pola aslinya: hero dengan CTA jelas, showcase fitur produk, logo klien sebagai social proof, testimoni pelanggan, dan footer lengkap dengan navigasi.</p>
+      <h3 class="h">Solution</h3>
+      <p>The end result is a company profile with a section structure that follows the original pattern: a hero with a clear CTA, a product feature showcase, client logos as social proof, customer testimonials, and a complete footer with navigation.</p>
       <div class="chips">
         <span class="chip">Hero + CTA</span>
-        <span class="chip">Mega menu produk</span>
-        <span class="chip">Grid fitur</span>
-        <span class="chip">Logo klien</span>
-        <span class="chip">Testimoni</span>
+        <span class="chip">Product mega menu</span>
+        <span class="chip">Feature grid</span>
+        <span class="chip">Client logos</span>
+        <span class="chip">Testimonials</span>
       </div>
     </section>
 
     <section class="block">
-      <h3 class="h">Hasil &amp; Pembelajaran</h3>
-      <p>Proyek ini melatih kemampuan membaca struktur UI enterprise yang kompleks dan menerjemahkannya jadi kode yang rapi dan modular, sekaligus memahami bagaimana perusahaan SaaS B2B menyusun narasi kepercayaan (trust signals) di halaman utama mereka.</p>
+      <h3 class="h">Results &amp; Learnings</h3>
+      <p>This project trained my ability to read the structure of a complex enterprise UI and translate it into clean, modular code, while also helping me understand how B2B SaaS companies build a narrative of trust (trust signals) on their main pages.</p>
     </section>
 
     <div class="reflection">
-      <h3 class="h" style="margin-bottom:10px;">Refleksi</h3>
-      <p>Tantangan terbesar bukan di styling, tapi di menjaga konsistensi spacing antar section yang jumlahnya banyak. Memecah komponen jadi bagian kecil sejak awal sangat membantu proses ini.</p>
+      <h3 class="h" style="margin-bottom:10px;">Reflection</h3>
+      <p>The biggest challenge was not the styling, but keeping spacing consistent across so many sections. Breaking components into small parts from the start helped a lot with this.</p>
     </div>
   </div>
 
   <!-- ============ CASE 2: SPIN WHEEL ============ -->
   <div class="case wheel-section" id="spinwheel">
     <span class="tag wheel">Web App · Random Picker</span>
-    <h2 class="title">Spin Wheel App — Undian Nama yang Terasa Adil</h2>
-    <p class="dek">Aplikasi roda putar untuk menentukan satu nama terpilih secara acak dari daftar peserta.</p>
+    <h2 class="title">Spin Wheel App — A Name Draw That Feels Fair</h2>
+    <p class="dek">A spinning wheel app that picks one name at random from a list of participants.</p>
 
     <div class="meta-row">
-      <div class="meta-item"><div class="label">Peran</div><div class="value">Frontend Developer</div></div>
+      <div class="meta-item"><div class="label">Role</div><div class="value">Frontend Developer</div></div>
       <div class="meta-item"><div class="label">Tools</div><div class="value">JavaScript, CSS Animation</div></div>
-      <div class="meta-item"><div class="label">Fungsi</div><div class="value">Undian / Random Picker</div></div>
-      <div class="meta-item"><div class="label">Tahun</div><div class="value">2026</div></div>
+      <div class="meta-item"><div class="label">Function</div><div class="value">Draw / Random Picker</div></div>
+      <div class="meta-item"><div class="label">Year</div><div class="value">2026</div></div>
     </div>
 
     <div class="hero-stat">
-      <div class="stat"><div class="num orange">1 klik</div><div class="cap">untuk memilih pemenang</div></div>
-      <div class="stat"><div class="num purple">2–50</div><div class="cap">nama peserta per putaran</div></div>
-      <div class="stat"><div class="num blue">Sama</div><div class="cap">peluang untuk setiap nama</div></div>
+      <div class="stat"><div class="num orange">1 click</div><div class="cap">to pick a winner</div></div>
+      <div class="stat"><div class="num purple">2–50</div><div class="cap">participant names per spin</div></div>
+      <div class="stat"><div class="num blue">Equal</div><div class="cap">chance for every name</div></div>
     </div>
 
     <!-- DEMO INTERAKTIF -->
     <div class="demo">
       <div class="names-input">
-        <label for="namesInput">Daftar nama (satu nama per baris)</label>
-        <textarea id="namesInput" placeholder="Tulis satu nama per baris">Andi
+        <label for="namesInput">List of names (one name per line)</label>
+        <textarea id="namesInput" placeholder="Write one name per line">Andi
 Budi
 Citra
 Dewi
 Eka
 Fajar</textarea>
-        <small>Minimal 2 nama, maksimal 50 nama.</small>
+        <small>Minimum 2 names, maximum 50 names.</small>
       </div>
 
       <div class="btn-row">
-        <button class="apply-btn" id="applyBtn" type="button">Terapkan Daftar</button>
-        <button class="spin-btn" id="spinBtn" type="button">Putar Roda</button>
+        <button class="apply-btn" id="applyBtn" type="button">Apply List</button>
+        <button class="spin-btn" id="spinBtn" type="button">Spin the Wheel</button>
       </div>
 
       <div class="wheel-box">
@@ -183,42 +292,42 @@ Fajar</textarea>
         <div class="wheel" id="wheel"></div>
       </div>
 
-      <div class="result" id="result" aria-live="polite">Tekan "Putar Roda" untuk memulai</div>
+      <div class="result" id="result" aria-live="polite">Press "Spin the Wheel" to start</div>
     </div>
 
     <section class="block">
-      <h3 class="h">Latar Belakang</h3>
-      <p>Aplikasi ini dibuat untuk kebutuhan undian sederhana — misalnya menentukan pemenang giveaway atau memilih nama secara acak dari sebuah daftar — dengan cara yang lebih menarik dibanding sekadar generator angka acak.</p>
+      <h3 class="h">Background</h3>
+      <p>This app was built for simple draw needs, such as picking a giveaway winner or choosing a name at random from a list, in a way that is more engaging than a plain random number generator.</p>
     </section>
 
     <section class="block">
-      <h3 class="h">Tantangan</h3>
-      <p>Tantangan utamanya ada di animasi: roda harus terlihat benar-benar berputar secara acak, berhenti dengan smooth di satu segmen, dan tetap terasa adil bagi semua peserta meski jumlah nama berubah-ubah.</p>
+      <h3 class="h">Challenge</h3>
+      <p>The main challenge was the animation: the wheel has to look like it is truly spinning at random, stop smoothly on one segment, and still feel fair to every participant even when the number of names changes.</p>
     </section>
 
     <section class="block">
-      <h3 class="h">Proses</h3>
+      <h3 class="h">Process</h3>
       <ol class="steps">
-        <li><h4>Riset logika random</h4><p>Pemenang dipilih lebih dulu secara acak, lalu indeksnya dipetakan ke sudut rotasi roda agar hasil animasi selalu cocok dengan pemenang.</p></li>
-        <li><h4>Desain segmen dinamis</h4><p>Roda dibagi menjadi segmen warna dengan <code>conic-gradient</code> sesuai jumlah nama yang diinput.</p></li>
-        <li><h4>Animasi putaran</h4><p>Menggunakan transisi CSS dengan easing agar putaran terasa natural dan melambat di akhir.</p></li>
-        <li><h4>Uji coba dengan berbagai jumlah nama</h4><p>Memastikan animasi dan label tetap rapi untuk jumlah nama yang sedikit maupun banyak.</p></li>
+        <li><h4>Researching the random logic</h4><p>The winner is picked at random first, then its index is mapped to the wheel's rotation angle so the animation always matches the winner.</p></li>
+        <li><h4>Designing dynamic segments</h4><p>The wheel is divided into colored segments with <code>conic-gradient</code> according to the number of names entered.</p></li>
+        <li><h4>Spin animation</h4><p>Using a CSS transition with easing so the spin feels natural and slows down at the end.</p></li>
+        <li><h4>Testing with different numbers of names</h4><p>Making sure the animation and labels stay neat for both a small and a large number of names.</p></li>
       </ol>
     </section>
 
     <section class="block">
-      <h3 class="h">Solusi</h3>
-      <p>Pengguna memasukkan daftar nama, lalu menekan tombol putar. Roda berputar dengan animasi yang meyakinkan sebelum berhenti di satu nama, yang kemudian ditampilkan sebagai pemenang.</p>
+      <h3 class="h">Solution</h3>
+      <p>Users enter a list of names, then press the spin button. The wheel spins with a convincing animation before stopping on one name, which is then shown as the winner.</p>
     </section>
 
     <section class="block">
-      <h3 class="h">Hasil</h3>
-      <p>Aplikasi ini dipakai untuk undian sederhana dan memberi kesan lebih hidup dibanding sekadar menampilkan nama secara instan — proses "menunggu roda berhenti" menambah keseruan bagi yang menonton.</p>
+      <h3 class="h">Results</h3>
+      <p>The app is used for simple draws and feels more lively than just showing a name instantly. The process of "waiting for the wheel to stop" adds excitement for those watching.</p>
     </section>
 
     <div class="reflection">
-      <h3 class="h" style="margin-bottom:10px;">Refleksi</h3>
-      <p>Bagian tersulit adalah membuat easing animasi terasa "fair" — tidak terlalu cepat berhenti, tapi juga tidak bertele-tele. Menyesuaikan durasi dan kurva animasi butuh beberapa kali percobaan manual.</p>
+      <h3 class="h" style="margin-bottom:10px;">Reflection</h3>
+      <p>The hardest part was making the animation easing feel "fair": not stopping too quickly, but not dragging on either. Tuning the duration and animation curve took several manual attempts.</p>
     </div>
   </div>
 
@@ -255,11 +364,11 @@ Fajar</textarea>
   function buildWheel() {
     const list = parseNames();
     if (list.length < MIN_NAMES) {
-      result.textContent = 'Masukkan minimal ' + MIN_NAMES + ' nama.';
+      result.textContent = 'Enter at least ' + MIN_NAMES + ' names.';
       return false;
     }
     if (list.length > MAX_NAMES) {
-      result.textContent = 'Maksimal ' + MAX_NAMES + ' nama.';
+      result.textContent = 'Maximum ' + MAX_NAMES + ' names.';
       return false;
     }
 
@@ -291,7 +400,7 @@ Fajar</textarea>
       wheel.appendChild(label);
     });
 
-    result.textContent = 'Tekan "Putar Roda" untuk memulai';
+    result.textContent = 'Press "Spin the Wheel" to start';
     return true;
   }
 
@@ -301,7 +410,7 @@ Fajar</textarea>
     spinBtn.disabled = true;
     applyBtn.disabled = true;
     input.disabled = true;
-    result.textContent = 'Memutar...';
+    result.textContent = 'Spinning...';
 
     const seg = 360 / names.length;
     winnerIndex = randomInt(names.length);
@@ -320,7 +429,7 @@ Fajar</textarea>
   wheel.addEventListener('transitionend', function (e) {
     if (e.propertyName !== 'transform' || !spinning) return;
     spinning = false;
-    result.textContent = 'Pemenang: ' + names[winnerIndex] + ' 🎉';
+    result.textContent = 'Winner: ' + names[winnerIndex] + ' 🎉';
     spinBtn.disabled = false;
     applyBtn.disabled = false;
     input.disabled = false;
