@@ -999,7 +999,7 @@ header {
     height: auto;
     object-fit: contain;
     transition: transform 0.7s ease;
-
+    border-radius: 20px;
 
     align-items: center;
     transition: transform 0.7s ease;
