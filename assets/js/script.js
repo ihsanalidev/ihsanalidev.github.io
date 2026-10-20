@@ -29,7 +29,8 @@ class MyHeader extends HTMLElement {
             <div class="modal-options">
               <div class="card-call" onclick="window.open('https://wa.me/6285175251434?text=Halo%2C%20saya%20ingin%20berdiskusi%20mengenai%20proyek', '_blank')">
                 <i class="fa-brands fa-whatsapp"></i>
-                <h4>Chat via WhatsApp</h4>
+                <h4>Chat me</h4>
+                <p>Open Whatsapp</p>
               </div>
               <a class="email-link" href="mailto:ihsanaliwork@gmail.com" target="_blank">
                 <div class="card-email">
