@@ -27,10 +27,9 @@ class MyHeader extends HTMLElement {
             <h2>Get in touch</h2>
             <p>Let's build something great together.</p>
             <div class="modal-options">
-              <div class="card-call" onclick="window.open('https://calendly.com/username', '_blank')">
-                <i class="fa-regular fa-calendar"></i>
-                <h4>Book a call</h4>
-                <p>30 Min Call</p>
+              <div class="card-call" onclick="window.open('https://wa.me/6285175251434?text=Halo%2C%20saya%20ingin%20berdiskusi%20mengenai%20proyek', '_blank')">
+                <i class="fa-brands fa-whatsapp"></i>
+                <h4>Chat via WhatsApp</h4>
               </div>
               <a class="email-link" href="mailto:ihsanaliwork@gmail.com" target="_blank">
                 <div class="card-email">
